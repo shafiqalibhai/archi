@@ -25,7 +25,6 @@
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-p2-director-plugin</artifactId>
                 <version>${tycho-version}</version>
-                
                 <executions>
                     <!-- Create the products for all configured os/ws/arch environments -->
                     <execution>
@@ -37,7 +36,6 @@
                         </goals>
                     </execution>
                 </executions>
-                
                 <configuration>
                     <products>
                         <product>
@@ -57,6 +55,9 @@
                         <macosx>zip</macosx>
                         <win32>zip</win32>
                     </formats>
+                    <profileProperties>
+                        <org.eclipse.justj.buildtime>true</org.eclipse.justj.buildtime>
+                    </profileProperties>
                 </configuration>
             </plugin>
 
@@ -72,8 +73,6 @@
                     <includeAllDependencies>true</includeAllDependencies>
                 </configuration>
             </plugin>
-            
         </plugins>
     </build>
-
 </project>
